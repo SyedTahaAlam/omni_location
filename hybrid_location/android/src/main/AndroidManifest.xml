@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hybrid_location">
+
+    <!-- Required for all network communication with geolocation APIs -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Required to check Wi-Fi state -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- Required to trigger Wi-Fi scans on Android < 9 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!-- Required to read Wi-Fi scan results on Android 9+ -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- Required to read cell tower information -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- Required for BLE scanning; neverForLocation avoids location implication -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"/>
+
+    <application>
+        <!-- No activities or services — plugin only -->
+    </application>
+</manifest>
